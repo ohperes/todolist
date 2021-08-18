@@ -1,0 +1,67 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Lista de Tarefas :)</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="theme-color" content="#ffffff">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+	<main class="hide">
+		<div class="container signup-page hide">
+			<form class="signup-form" autocomplete="off">
+				<h1>Cadastro</h1>
+				<input type="email" id="signup-email" placeholder="Email" required>
+				<div class="password-container">
+					<input type="password" id="signup-password" placeholder="Password" required><i class="fa fa-eye eye" aria-hidden="true"></i>
+				</div>
+				<ul class="signup-ul">
+					<li class="signup-li">É preciso conter uma letra maiuscula!</li>
+					<li class="signup-li">É preciso conter no mínimo1 5 caracteres!</li>
+					<li class="signup-li">É preciso conter um numero!</li>
+					<li class="signup-li">É preciso conter um caractere especial como: #!@$%^</li>
+				</ul>
+				<button id="signup-btn" class="form-btns" disabled="true">Cadastrar-se</button>
+				<p id="return-login" class="signup">Voltar para login.
+					<div id="signup-error" class="error-msg"></div>
+			</form>
+		</div>
+
+		<div class="container login-page">
+			<form class="login-form">
+				<h1>Login</h1>
+				<input type="email" id="login-email" placeholder="Email" required>
+				<div class="password-container">
+					<input type="password" id="login-password" placeholder="Password" autocomplete="current-password" required><i class="fa fa-eye eye" aria-hidden="true"></i>
+				</div>
+				<button id="login-btn" class="form-btns">Login</button>
+				<p id="signup-link" class="signup">Realizar cadastro.</p>
+				<div id="login-error" class="error-msg"></div>
+			</form>
+		</div>
+
+		<div class="container main-page hide">
+			<h1>Hoje eu vou:</h1>
+			<div class="todo-container">
+				<ul class="todos"></ul>
+				<form class="new-task-container" autocomplete="off">
+					<input type="text" placeholder="+ Add Tarefa" id="todo-input" class="todo-input" autofocus>
+					<button type="submit" id="submit"></button>
+				</form>
+			</div>
+			<button id="logout-btn" class="form-btns logout-btn">Log out</button>
+		</div>
+	</main>
+</body>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.1.2/firebase-firestore.js"></script>
+<script src="js/main.js"></script>
+</html>
